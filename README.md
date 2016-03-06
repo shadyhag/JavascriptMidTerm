@@ -1,0 +1,2 @@
+# JavascriptMidTerm
+StoryMap Midterm
