@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <!-- CSS Imports -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- =====================
+  Edit css/main.css
+
+  ====================== -->
+
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="top">
+
+
+      <div id= "content1">
+        <button class="next" onclick="showSlide2()" style="float:right">Next</button>
+        <h1 class = "title"> Philadelphia Bike Lane Site Suitability </h1>
+
+        <!-- <div>
+
+
+        <br><br>
+
+      </div> -->
+
+      <div>
+        <h2 class = "subtitle">Introduction</h2>
+      </div>
+      <p class="main">Philadelphia has the highest percentage of bicycle commuters than any other city in the nation, but its yearly rate of
+        bike lane additions pales in comparison with other major cities.
+      </p>
+      <h2 class = "graphtitle">Annual Average Miles of Bike Lanes Added
+        <br>2008-2013 </br> </h2>
+        <canvas id="myChart" width="280" height="280"></canvas>
+      <p class="main">
+        Most bike lanes are added when the roads get repaved. In 2013 and 2014, Philadelphia only repaved fifty miles of its roads at a rate of twenty-five
+        miles per year. This is much less than what a city should actually be repaving, which is around 140-150 miles per year.
+      </p>
+      <p class="main">
+        This backlog and consequently the rate of bike lane additions result in little funding allocated to street improvements. Since the City of Philadelphia
+        is severely restricted in its funding for street improvements, great care should be taken in deciding where and what kind of bike lanes the City
+        should add to increase bike infrastructure investments.
+
+      </p>
+      <p class="main">The following slides look at four different characteristics of the City's streets in order to filter out the street that
+        should be at the top of the list in new bike infrastructure. </p>
+
+
+          <div class="styleSheet">
+            <select class = "button">
+              <option>California</option>
+              <option>New York</option>
+              <option>Banannas</option>
+            </select>
+          </div>
+
+          <h2>Concentration</h2>
+          <div class="styleSheet">
+            <select class = "button">
+              <option>Transportation</option>
+              <option>New York</option>
+              <option>Banannas</option>
+            </select>
+          </div>
+          <h2>Experience</h2>
+          <div class="styleSheet">
+            <select class = "button">
+              <option>Entry Level</option>
+              <option>New York</option>
+              <option>Banannas</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div id= "content2" style="display: none;">
+          <div>
+            <button class="next" onclick="showSlide3()" style="float:right">Next</button>
+
+            <br><br>
+            <div>
+              <button onclick="showSlide1()" type = "button" class = "previous"> Previous</button>
+            </div>
+            <div>
+              <h2 class = "subtitle">Introduction</h2>
+            </div>
+          </div>
+
+          <div>
+            <h2>Bike Lane</h2>
+          </div>
+          <p class="main">Blah
+          </p>
+          <p>Lob </p>
+
+          <h2>States</h2>
+          <div class="styleSheet">
+            <select class = "button">
+              <option>California</option>
+              <option>New York</option>
+              <option>Banannas</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div id= "content3" style="display: none;">
+          <div>
+            <button class="next" onclick="showSlide4()" style="float:right">Next</button>
+
+            <br><br>
+            <div>
+              <button onclick="showSlide2()" type = "button" class = "previous"> Previous</button>
+            </div>
+          </div>
+
+          <div>
+            <h2>Slide 3</h2>
+          </div>
+          <p class="main">Slide3 Content
+          </p>
+          <p>Blah Blah Blah </p>
+
+          <h2>States</h2>
+          <div class="styleSheet">
+            <select class = "button">
+              <option>California</option>
+              <option>New York</option>
+              <option>Bananas</option>
+            </select>
+          </div>
+        </div>
+
+        <div id= "content4" style="display: none;">
+          <div>
+            <button class="next" onclick="showSlide5()" style="float:right">Next</button>
+
+            <br><br>
+            <div>
+              <button onclick="showSlide3()" type = "button" class = "previous"> Previous</button>
+            </div>
+          </div>
+
+          <div>
+            <h2>Slide 4</h2>
+          </div>
+          <p class="main">Slide3 Content
+          </p>
+          <p>Blah Blah Blah </p>
+
+          <h2>States</h2>
+          <div class="styleSheet">
+            <select class = "button">
+              <option>California</option>
+              <option>New York</option>
+              <option>Bananas</option>
+            </select>
+          </div>
+        </div>
+
+        <div id= "content5" style="display: none;">
+          <div>
+            <!-- <button onclick="showSlide3()" style="float:right">Next</button> -->
+
+            <br><br>
+            <div>
+              <button class="next" onclick="showSlide4()" type = "button" class = "previous"> Previous</button>
+            </div>
+          </div>
+
+          <div>
+            <h2>Slide 5</h2>
+          </div>
+          <p class="main">Slide3 Content
+          </p>
+          <p>Blah Blah Blah </p>
+
+          <h2>States</h2>
+          <div class="styleSheet">
+            <select class = "button">
+              <option>California</option>
+              <option>New York</option>
+              <option>Bananas</option>
+            </select>
+          </div>
+        </div>
+        <!-- =====================
+        <div class="line-separator"></div>
+        <h1 class= "schools"> Schools </h1>
+        <div class ="box">
+
+        <p class = "schoolName"> Henry, Charles W. </p>
+        <p class = "level"> Elem/Middle </p>
+
+        <p class = "address"> 601 Carpenter La. <br> 19119-3405</br> </p>
+      </div>
+      <div class ="box">
+      <p class = "schoolName"> Universal Creighton Charter School </p>
+      <p class = "level"> Elem/Middle </p>
+      <p class = "address"> 5401 Taber Ave <br> 19210-3614 </p>
+    </div>
+    <div class = "box">
+    <p class = "schoolName"> Marshall, John </p>
+    <p class = "level"> Elementary School </p>
+  </div>
+
+  ====================== -->
+
+
+</div>
+</div>
+
+
+
+
+<!-- Map -->
+
+<div id="map" class="map"></div>
+
+
+
+
+<!-- Javascript Imports -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+<script src="js/leaflet.js"></script>
+<script src="js/jquery-2.2.0.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/leaflet.js"></script>
+<script src="js/main.js"></script>
+<script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+</body>
+</html>
