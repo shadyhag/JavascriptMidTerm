@@ -4,8 +4,8 @@ http://www.chartjs.org/
 ===================== */
 
 var dataset1 = "https://shayda.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM pennjobsdatatable20160220 WHERE city1 IN ('New York', 'Philadelphia', 'Washington D.C.', 'Boston', 'Pittsburgh','Baltimore', 'Chicago')";
-var dataset2 = 'https://shayda.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM usstates LIMIT 1';
-var dataset3 = 'https://shayda.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM usstates';
+var dataset2 = 'https://shayda.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM usstates';
+var dataset3 = 'https://shayda.cartodb.com/api/v2/sql?format=GeoJSON&q=SELECT * FROM usstates LIMIT 1';
 // var dataset4 =
 // var dataset5 =
 
@@ -32,18 +32,18 @@ var myStyle2 = function(feature) {
   return feature.properties.pop90_sqmi < 100 ? {fillColor: "red", color: "red", opacity:0}:
   {fillColor: "grey", color: "grey", opacity:0};
 };
-var myStyle3 = function(feature) {
-  return feature.properties.pop90_sqmi < 100 ? {fillColor: "red", color: "red", opacity:0}:
-  {fillColor: "grey", color: "grey", opacity:0};
-};
-var myStyle4 = function(feature) {
-  return feature.properties.pop90_sqmi < 100 ? {fillColor: "red", color: "red", opacity:0}:
-  {fillColor: "grey", color: "grey", opacity:0};
-};
-var myStyle5 = function(feature) {
-  return feature.properties.pop90_sqmi < 100 ? {fillColor: "red", color: "red", opacity:0}:
-  {fillColor: "grey", color: "grey", opacity:0};
-};
+// var myStyle3 = function(feature) {
+//   return feature.properties.pop90_sqmi < 100 ? {fillColor: "red", color: "red", opacity:0}:
+//   {fillColor: "grey", color: "grey", opacity:0};
+// };
+// var myStyle4 = function(feature) {
+//   return feature.properties.pop90_sqmi < 100 ? {fillColor: "red", color: "red", opacity:0}:
+//   {fillColor: "grey", color: "grey", opacity:0};
+// };
+// var myStyle5 = function(feature) {
+//   return feature.properties.pop90_sqmi < 100 ? {fillColor: "red", color: "red", opacity:0}:
+//   {fillColor: "grey", color: "grey", opacity:0};
+// };
 //
 // var eachFeature = function(feature, layer) {
 //   layer.on('click', function (e) {
@@ -99,6 +99,9 @@ Filter by what you want to see when you navigate to next slide
 // });
 //
 var showSlide1 = function() {
+
+  myFeatureGroup.clearLayers();
+
   $('#content2').hide();
   $('#content1').show();
   $('#content3').hide();
@@ -107,7 +110,7 @@ var showSlide1 = function() {
   $.ajax(dataset1).done(function(data) {console.log(data);
     myFeatureGroup = L.geoJson(data, {
       // onEachFeature: eachFeature,
-      style: myStyle1
+
       // filter: myFilter
 
     }).addTo(map);
@@ -116,14 +119,15 @@ var showSlide1 = function() {
 };
 
 var showSlide2 = function(){
+
   myFeatureGroup.clearLayers();
   $('#content1').hide();
   $('#content2').show();
   $('#content3').hide();
   $('#content4').hide();
   $('#content5').hide();
-  $.ajax(dataset3).done(function(data) {
-      var myFeatureGroup = L.geoJson(data, {
+  $.ajax(dataset2).done(function(data) {console.log(data);
+      myFeatureGroup = L.geoJson(data, {
         // onEachFeature: eachFeature,
         style: myStyle2,
         // filter: myFilter
